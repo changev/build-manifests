@@ -1,0 +1,126 @@
+{
+    "build-name": "onrack-devel", 
+    "build-requirements": "xenial", 
+    "downstream-jobs": [
+        {
+            "branch": "master", 
+            "command": "./HWIMO-BUILD", 
+            "commit-id": "395894d1125f3a7444756dd92a73626d9fe0b42d", 
+            "purpose": "Autotest Smoke Test", 
+            "repository": "https://eos2git.cec.lab.emc.com/OnRack/tests.git", 
+            "running-label": "ci-director", 
+            "working-directory": "tests/autotest"
+        }, 
+        {
+            "branch": "master", 
+            "command": "./HWIMO-BUILD", 
+            "commit-id": "3da38215e98af6583640789d5ddb8eb2f5a6f443", 
+            "purpose": "Build Onrack OVA", 
+            "repository": "https://eos2git.cec.lab.emc.com/OnRack/release-tools.git", 
+            "running-label": "vmworkstation12", 
+            "working-directory": "release-tools/packer"
+        }, 
+        {
+            "branch": "master", 
+            "command": "./HWIMO-BUILD", 
+            "commit-id": "3da38215e98af6583640789d5ddb8eb2f5a6f443", 
+            "purpose": "Make Updater", 
+            "repository": "https://eos2git.cec.lab.emc.com/OnRack/release-tools.git", 
+            "running-label": "xenial", 
+            "working-directory": "release-tools/onsite-upgrader"
+        }
+    ], 
+    "repositories": [
+        {
+            "branch": "master", 
+            "commit-id": "5d3f6a90e970d04cd1adacf40de25cbeb2a8e418", 
+            "repository": "https://eos2git.cec.lab.emc.com/RackHD/di.js.git"
+        }, 
+        {
+            "branch": "master", 
+            "commit-id": "b5130d8e98f759d2f6b8f80ea9c5ca8dd3e84e50", 
+            "repository": "https://eos2git.cec.lab.emc.com/RackHD/redfish-client-node.git"
+        }, 
+        {
+            "branch": "master", 
+            "commit-id": "ac8a381a141313701e7711d358d07912a1417db8", 
+            "repository": "https://eos2git.cec.lab.emc.com/OnRack/ubuntu-packages.git"
+        }, 
+        {
+            "branch": "master", 
+            "commit-id": "58a2cd9788aba298d7cc8e6dfd5c468c731a6974", 
+            "repository": "https://eos2git.cec.lab.emc.com/OnRack/on-ansible.git"
+        }, 
+        {
+            "branch": "master", 
+            "commit-id": "4b0c78c0a3f4c354d0511f3215a3986b260b5436", 
+            "repository": "https://eos2git.cec.lab.emc.com/RackHD/on-core.git"
+        }, 
+        {
+            "branch": "master", 
+            "commit-id": "739ca3cfdcdf110a0fab6a92ec81a67d8891fa26", 
+            "repository": "https://eos2git.cec.lab.emc.com/RackHD/on-dhcp-proxy.git"
+        }, 
+        {
+            "branch": "master", 
+            "commit-id": "ecc43deb66a12780c55e037e957d3509b7349d7e", 
+            "repository": "https://eos2git.cec.lab.emc.com/RackHD/on-http.git"
+        }, 
+        {
+            "branch": "master", 
+            "commit-id": "3f344ea73d60985b60e946b42a31f593f1014436", 
+            "repository": "https://eos2git.cec.lab.emc.com/RackHD/on-syslog.git"
+        }, 
+        {
+            "branch": "master", 
+            "commit-id": "9c6038a204e9d31bf6f61e1e906e97e1a7c8a80d", 
+            "repository": "https://eos2git.cec.lab.emc.com/RackHD/on-taskgraph.git"
+        }, 
+        {
+            "branch": "master", 
+            "commit-id": "a87a56eec5a545254a8ae37d42bc1644cf97ba87", 
+            "repository": "https://eos2git.cec.lab.emc.com/RackHD/on-tasks.git"
+        }, 
+        {
+            "branch": "master", 
+            "commit-id": "0857aca0f4436e60ea6ec51a06fc1e83d54d6020", 
+            "repository": "https://eos2git.cec.lab.emc.com/RackHD/on-tftp.git"
+        }, 
+        {
+            "branch": "master", 
+            "checked-out-directory-name": "onrack", 
+            "commit-id": "520fabc9f6b67880100060ee6146d57d257d1a25", 
+            "repository": "https://eos2git.cec.lab.emc.com/OnRack/onrack-base.git"
+        }, 
+        {
+            "branch": "master", 
+            "commit-id": "2f29b91d2dd75d1e24a1b4c044c0c872e85f453c", 
+            "repository": "https://eos2git.cec.lab.emc.com/OnRack/onrack-infra.git"
+        }, 
+        {
+            "branch": "master", 
+            "commit-id": "b54a28494c6bdbf54c8862c4592636b2066c863c", 
+            "repository": "https://eos2git.cec.lab.emc.com/OnRack/onserve.git"
+        }, 
+        {
+            "branch": "master", 
+            "commit-id": "8585f0328a5fed637363e7fd921730f844ef58d0", 
+            "repository": "https://eos2git.cec.lab.emc.com/weia4/emc-hardware-support.git"
+        }, 
+        {
+            "branch": "master", 
+            "commit-id": "d07db23e79c7093ba36ba1630e1c36a31bb0e1bd", 
+            "repository": "https://eos2git.cec.lab.emc.com/weia4/on-skupack.git"
+        }, 
+        {
+            "branch": "master", 
+            "commit-id": "e1f73347836b97d47b7423a769b496f000a3dd54", 
+            "repository": "https://eos2git.cec.lab.emc.com/OnRack/reset-keys.git"
+        }, 
+        {
+            "branch": "master", 
+            "commit-id": "d63ad4c0b654961ef2420770f7a7af525dc65d91", 
+            "repository": "https://eos2git.cec.lab.emc.com/OnRack/rackhd-obm-migration.git"
+        }
+    ]
+}

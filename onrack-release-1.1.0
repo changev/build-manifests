@@ -1,0 +1,96 @@
+{
+    "build-name": "onrack-release-1.1.0", 
+    "build-requirements": "trusty && bigjs", 
+    "downstream-jobs": [
+        {
+            "branch": "release/1.1.0-branch", 
+            "command": "./HWIMO-BUILD", 
+            "commit-id": "f6dec7187dc08917ad8531335314a11ce7f5db25", 
+            "purpose": "Autotest Smoke Test", 
+            "repository": "https://eos2git.cec.lab.emc.com/OnRack/tests.git", 
+            "running-label": "ci-director", 
+            "working-directory": "tests/autotest"
+        }, 
+        {
+            "branch": "master", 
+            "command": "./HWIMO-BUILD", 
+            "commit-id": "3da38215e98af6583640789d5ddb8eb2f5a6f443", 
+            "purpose": "Build Onrack OVA", 
+            "repository": "https://eos2git.cec.lab.emc.com/OnRack/release-tools.git", 
+            "running-label": "vmworkstation12", 
+            "working-directory": "release-tools/packer"
+        }, 
+        {
+            "branch": "master", 
+            "command": "./HWIMO-BUILD", 
+            "commit-id": "3da38215e98af6583640789d5ddb8eb2f5a6f443", 
+            "purpose": "Make Updater", 
+            "repository": "https://eos2git.cec.lab.emc.com/OnRack/release-tools.git", 
+            "running-label": "trusty && bigjs", 
+            "working-directory": "release-tools/onsite-upgrader"
+        }
+    ], 
+    "repositories": [
+        {
+            "branch": "release/1.1.0-branch", 
+            "commit-id": "248470d1b251292a1ca09daf10edf1a12e74a807", 
+            "repository": "https://eos2git.cec.lab.emc.com/OnRack/ubuntu-packages.git"
+        }, 
+        {
+            "branch": "release/1.1.0-branch", 
+            "commit-id": "b557c7fa6ef0fe4936d66b2a935fae14d4307a13", 
+            "repository": "https://eos2git.cec.lab.emc.com/OnRack/on-ansible.git"
+        }, 
+        {
+            "branch": "release/1.1.0-branch", 
+            "commit-id": "4341dac0c89c3fff1b4b2d9539335df10e7fd566", 
+            "repository": "https://eos2git.cec.lab.emc.com/RackHD/on-core.git"
+        }, 
+        {
+            "branch": "release/1.1.0-branch", 
+            "commit-id": "46d60387613594c5cb2963d907337b528d8015ba", 
+            "repository": "https://eos2git.cec.lab.emc.com/RackHD/on-dhcp-proxy.git"
+        }, 
+        {
+            "branch": "release/1.1.0-branch", 
+            "commit-id": "d4e59c913d16ce481afeac24d6a46e6fc365e81c", 
+            "repository": "https://eos2git.cec.lab.emc.com/RackHD/on-http.git"
+        }, 
+        {
+            "branch": "release/1.1.0-branch", 
+            "commit-id": "0e1797c678e6ed1c40e5f957aaf1582f32098f36", 
+            "repository": "https://eos2git.cec.lab.emc.com/RackHD/on-syslog.git"
+        }, 
+        {
+            "branch": "release/1.1.0-branch", 
+            "commit-id": "cafa128aa21fe60afab3a1adb62dc4150078177b", 
+            "repository": "https://eos2git.cec.lab.emc.com/RackHD/on-taskgraph.git"
+        }, 
+        {
+            "branch": "release/1.1.0-branch", 
+            "commit-id": "876d93d3da35b0cc5791d30bb489a2dc5ef9af70", 
+            "repository": "https://eos2git.cec.lab.emc.com/RackHD/on-tasks.git"
+        }, 
+        {
+            "branch": "release/1.1.0-branch", 
+            "commit-id": "5107b8e1f8587322c3ef7d1aacd6ccc9a97f5fb5", 
+            "repository": "https://eos2git.cec.lab.emc.com/RackHD/on-tftp.git"
+        }, 
+        {
+            "branch": "release/1.1.0-branch", 
+            "checked-out-directory-name": "onrack", 
+            "commit-id": "0d04773049bfe436d791bd45f1916591871b7bc5", 
+            "repository": "https://eos2git.cec.lab.emc.com/OnRack/onrack-base.git"
+        }, 
+        {
+            "branch": "release/1.1.0-branch", 
+            "commit-id": "4879e439ba074b54fa09ade18eb24b52f83dc612", 
+            "repository": "https://eos2git.cec.lab.emc.com/OnRack/onrack-infra.git"
+        }, 
+        {
+            "branch": "release/1.1.0-branch", 
+            "commit-id": "74174fa9b79a1d0e2fa3840d11e9fec9482a4db4", 
+            "repository": "https://eos2git.cec.lab.emc.com/OnRack/onserve.git"
+        }
+    ]
+}
